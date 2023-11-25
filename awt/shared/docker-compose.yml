@@ -1,0 +1,39 @@
+version: "2.1"
+services:
+  apache:
+    container_name: awt-server
+    image: awt/php:8.1-apache
+    volumes:
+        - /home/hbautista/Development/awt/shared:/var/www/html
+    ports:
+        - 8036:80
+    restart: unless-stopped
+    environment:
+    - DBHOST=awt-mysql
+    - DBUSER=root
+    - DBPWD=1TimePass!
+    - DBNAME=awt
+    - RLHOST=172.19.0.1
+    - RLPORT=6379
+    - RLPWD=awt2023
+    - RL_MAX=40
+    - RL_SECS=60
+  awt-mysql:
+    image: mysql:8.0
+    container_name: awt-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 1TimePass!
+    ports:
+      - "3306:3306"
+    hostname: mysql-db
+    restart: unless-stopped
+  
+  awt-redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - $PWD/shared:/data
+    command: redis-server --requirepass "awt2023"
+    restart: unless-stopped

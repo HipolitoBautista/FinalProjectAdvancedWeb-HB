@@ -1,0 +1,61 @@
+[2023-11-25T01:05:38.197274+00:00] AWT.INFO: Request::process--- request received --portal--- parameters:"{\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:05:38.200298+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:05:43.040540+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:""
+[2023-11-25T01:05:43.040793+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [empty] method [GET]
+[2023-11-25T01:05:43.040832+00:00] AWT.DEBUG: getAllApplicants() orderSql: 
+[2023-11-25T01:05:43.040853+00:00] AWT.DEBUG: getAllStudents() pagingSql: LIMIT 2
+[2023-11-25T01:05:45.935973+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:""
+[2023-11-25T01:05:45.936491+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:05:49.622165+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:""
+[2023-11-25T01:05:49.622413+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:11:13.555735+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\"id\":11,\"first_name\":\"John\",\"last_name\":\"Doe\",\"country\":\"USA\",\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:11:13.557810+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [empty] method [POST]
+[2023-11-25T01:11:31.441614+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\"first_name\":\"John\",\"last_name\":\"Doe\",\"country\":\"UaaaaaaaaaaaA\",\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:11:31.441821+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [PUT]
+[2023-11-25T01:11:57.226594+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\"first_name\":\"John\",\"last_name\":\"Doe\",\"country\":\"UaaaaaaaaaaaA\",\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:11:57.226755+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [DELETE]
+[2023-11-25T01:13:49.606098+00:00] AWT.INFO: Request::process--- request received --portal--- parameters:"{\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:13:49.606493+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:14:25.492902+00:00] AWT.INFO: Request::process--- request received --portal--- parameters:"{\"username\":\"\",\"password\":\"\"}"
+[2023-11-25T01:14:25.493202+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:14:25.496340+00:00] AWT.ERROR: [Exception: No applicant records found. in /var/www/html/classes/class.portal.php:63 Stack trace: #0 /var/www/html/classes/class.portal.php(47): Portal->handleLogin('') #1 /var/www/html/classes/class.request.php(72): Portal->GET(Array) #2 /var/www/html/index.php(20): Request->process(Array, Array) #3 {main}]
+[2023-11-25T01:14:27.989624+00:00] AWT.INFO: Request::process--- request received --portal--- parameters:"{\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:14:27.990194+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:14:57.956798+00:00] AWT.INFO: Request::process--- request received --applicantverification--- parameters:""
+[2023-11-25T01:14:57.957998+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:17:06.790870+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\n    \"order\":{\"first_name\":\"asc\", \"country\":\"desc\"},\n    \"paging\": {\"start\":0, \"end\": 5}\n}"
+[2023-11-25T01:17:06.791071+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [empty] method [GET]
+[2023-11-25T01:17:06.791141+00:00] AWT.DEBUG: getAllApplicants() orderSql: ORDER BY first_name asc, country desc
+[2023-11-25T01:17:06.791173+00:00] AWT.DEBUG: getAllStudents() pagingSql: LIMIT 0, 5
+[2023-11-25T01:17:45.426019+00:00] AWT.ERROR: redis object creation failed.RedisException: Connection refused in /var/www/html/classes/class.handler.php:53 Stack trace: #0 /var/www/html/classes/class.handler.php(53): Redis->connect('172.19.0.4', '6379') #1 /var/www/html/classes/class.request.php(5): Handler->__construct() #2 /var/www/html/index.php(13): Request->__construct() #3 {main}
+[2023-11-25T01:17:45.426272+00:00] AWT.ERROR: Request::rateLimitCheckRedis object not operational.
+[2023-11-25T01:21:20.587778+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\n    \"order\":{\"first_name\":\"asc\", \"country\":\"desc\"},\n    \"paging\": {\"start\":0, \"end\": 5}\n}"
+[2023-11-25T01:21:20.590413+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [empty] method [GET]
+[2023-11-25T01:21:20.590558+00:00] AWT.DEBUG: getAllApplicants() orderSql: ORDER BY first_name asc, country desc
+[2023-11-25T01:21:20.590599+00:00] AWT.DEBUG: getAllStudents() pagingSql: LIMIT 0, 5
+[2023-11-25T01:21:42.702763+00:00] AWT.INFO: Request::process--- request received --portal--- parameters:"{\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:21:42.702971+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:21:54.928487+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:""
+[2023-11-25T01:21:54.928646+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [empty] method [GET]
+[2023-11-25T01:21:54.928687+00:00] AWT.DEBUG: getAllApplicants() orderSql: 
+[2023-11-25T01:21:54.928709+00:00] AWT.DEBUG: getAllStudents() pagingSql: LIMIT 2
+[2023-11-25T01:21:58.112259+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:""
+[2023-11-25T01:21:58.112461+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T01:22:16.440376+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\"id\":11,\"first_name\":\"John\",\"last_name\":\"Doe\",\"country\":\"USA\",\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:22:16.440603+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [POST]
+[2023-11-25T01:22:36.852705+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\"id\":11,\"first_name\":\"firedrill\",\"last_name\":\"Doe\",\"country\":\"USA\",\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:22:36.852990+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [PUT]
+[2023-11-25T01:22:50.841088+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\"id\":11,\"first_name\":\"firedrill\",\"last_name\":\"Doe\",\"country\":\"USA\",\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T01:22:50.841292+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [DELETE]
+[2023-11-25T01:24:18.441425+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:"{\n    \"order\":{\"first_name\":\"asc\", \"country\":\"desc\"},\n    \"paging\": {\"start\":0, \"end\": 5}\n}"
+[2023-11-25T01:24:18.441659+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [empty] method [GET]
+[2023-11-25T01:24:18.441735+00:00] AWT.DEBUG: getAllApplicants() orderSql: ORDER BY first_name asc, country desc
+[2023-11-25T01:24:18.441773+00:00] AWT.DEBUG: getAllStudents() pagingSql: LIMIT 0, 5
+[2023-11-25T03:35:18.786553+00:00] AWT.INFO: Request::process--- request received --portal--- parameters:"{\"username\":\"johndoeee123\",\"password\":\"strongpassword123\"}"
+[2023-11-25T03:35:18.790424+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
+[2023-11-25T03:35:23.529790+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:""
+[2023-11-25T03:35:23.529958+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [empty] method [GET]
+[2023-11-25T03:35:23.530749+00:00] AWT.DEBUG: getAllApplicants() orderSql: 
+[2023-11-25T03:35:23.530830+00:00] AWT.DEBUG: getAllStudents() pagingSql: LIMIT 2
+[2023-11-25T03:35:26.282428+00:00] AWT.INFO: Request::process--- request received --applicants--- parameters:""
+[2023-11-25T03:35:26.282622+00:00] AWT.DEBUG: Authorization::checkPermissionsubResource [/] method [GET]
